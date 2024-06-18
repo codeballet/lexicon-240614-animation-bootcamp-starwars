@@ -78,7 +78,7 @@ body {
 .square .story {
   color: #b6a70a;
   font-size: 4rem;
-  animation: scroll 60s linear forwards;
+  animation: scroll 80s linear forwards;
 
   font-family: "Pathway Gothic One", sans-serif;
   font-weight: 400;
@@ -106,12 +106,12 @@ body {
     opacity: 1;
   }
 
-  90% {
+  50% {
     opacity: 0.7;
   }
 
   100% {
-    transform: translateY(-2500px);
+    transform: translateY(-4000px);
     opacity: 0;
   }
 }
