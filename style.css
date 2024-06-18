@@ -1,0 +1,114 @@
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=Pathway+Gothic+One&display=swap");
+
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(14, 14, 22);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LOGO */
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 100px;
+  background-size: cover;
+  top: 30%;
+}
+
+.logo {
+  transform-style: preserve-3d;
+  animation: zoom 20s ease-in forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: translateZ(80px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateZ(-1000px);
+    opacity: 0;
+  }
+}
+
+/* SCROLL */
+
+.scroll {
+  margin: auto auto;
+  width: 800px;
+  height: 800px;
+  position: relative;
+  perspective: 100px;
+  background-size: cover;
+}
+
+.square {
+  position: absolute;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0);
+  transform-style: preserve-3d;
+  transform: rotateX(8deg);
+}
+
+.square .episode,
+.square .title,
+.square .story {
+  color: #b6a70a;
+  font-size: 4rem;
+  animation: scroll 60s linear forwards;
+
+  font-family: "Pathway Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.square .episode,
+.square .title {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.square .title {
+  font-size: 7rem;
+}
+
+.square .story {
+  text-align: justify;
+  margin-top: 4rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(1000px);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-2500px);
+    opacity: 0;
+  }
+}
